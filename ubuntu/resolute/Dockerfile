@@ -9,8 +9,9 @@ RUN apt-get update -q \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-# RUN apt-get update && apt-get install -y wget # Use this to get from the repository if needed in the future
-
+# Copy dqrobotics install script and install dqrobotics
 RUN mkdir -p ~/install/dqrobotics
 COPY install_dqrobotics_ubuntu26.sh /root/install/dqrobotics/
-RUN cd ~/install/dqrobotics && chmod +x install_dqrobotics_ubuntu26.sh && . install_dqrobotics_ubuntu26.sh
+RUN cd ~/install/dqrobotics  \
+    && chmod +x install_dqrobotics_ubuntu26.sh  \
+    && . install_dqrobotics_ubuntu26.sh
