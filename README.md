@@ -27,3 +27,29 @@ The workflow will create one intermediate tags for `amd64` and `arm64` and then 
 which are then merged into
 
 - `resolute`.
+
+## Test your image
+
+1. Run your container
+
+```shell
+docker run -it --name=dqrobotics \
+--rm --privileged --network=host --ipc=host --env=DISPLAY \
+ghcr.io/dqrobotics/container:resolute /bin/bash
+```
+
+2. Test a DQ Robotics example
+
+```shell
+cd ~/ && git clone https://github.com/dqrobotics/cpp-examples.git
+cd ~/cpp-examples/cmake/performance_evaluation && mkdir -p build
+cd ~/cpp-examples/cmake/performance_evaluation/build && cmake .. && make 
+./performance_evaluation
+```
+
+## Useful resources
+
+- [Docker course](https://uomresearchit.github.io/docker-introduction/introduction.html).
+- [Happy days with Docker](https://ros2-tutorial.readthedocs.io/en/latest/docker/index.html).
+
+
