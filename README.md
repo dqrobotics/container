@@ -1,4 +1,4 @@
-![GitHub License](https://img.shields.io/github/license/dqrobotics/docker)![GitHub contributors](https://img.shields.io/github/contributors/dqrobotics/docker)
+![GitHub License](https://img.shields.io/github/license/dqrobotics/container)![GitHub contributors](https://img.shields.io/github/contributors/dqrobotics/container)
 
 # `dqrobotics` container(s)
 
