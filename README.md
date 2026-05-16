@@ -16,9 +16,10 @@ docker pull ghcr.io/dqrobotics/container:resolute
 
 For each version of Ubuntu, it is expected one folder with the entire docker build context and one GitHub actions workflow file.
 
-|Ubuntu Version|Folder           |Workflow                           |
-|--------------|-----------------|-----------------------------------|
-|Ubuntu 26.04  |`ubuntu/resolute`|`.github/workflows/ubuntu_resolute`|
+| Ubuntu Version | Folder            | Workflow                            |
+|----------------|-------------------|-------------------------------------|
+| Ubuntu 24.04   | `ubuntu/noble`    | `.github/workflows/ubuntu_noble`    |
+| Ubuntu 26.04   | `ubuntu/resolute` | `.github/workflows/ubuntu_resolute` |
 
 The workflow will create one intermediate tags for `amd64` and `arm64` and then merge them. For instance, for `resolute`, the intermediate tags will be
 - `resolute_amd64`
